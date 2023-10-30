@@ -32,10 +32,10 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={() => clickHandle('components')}>Components</TabButton>
-            <TabButton onSelect={() => clickHandle('jsx')}>JSX</TabButton>
-            <TabButton onSelect={() => clickHandle('props')}>Props</TabButton>
-            <TabButton onSelect={() => clickHandle('state')}>State</TabButton>
+            <TabButton isSelected={selectedTopic === 'components'} onSelect={() => clickHandle('components')}>Components</TabButton>
+            <TabButton isSelected={selectedTopic === 'jsx'} onSelect={() => clickHandle('jsx')}>JSX</TabButton>
+            <TabButton isSelected={selectedTopic === 'props'} onSelect={() => clickHandle('props')}>Props</TabButton>
+            <TabButton isSelected={selectedTopic === 'state'} onSelect={() => clickHandle('state')}>State</TabButton>
           </menu>
           {tabContent}
         </section>
