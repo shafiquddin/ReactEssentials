@@ -1,4 +1,4 @@
-import CoreConceptData from "../CoreConceptsData";
+import CoreConceptData from "../../CoreConceptsData";
 import './CoreConcepts.css';
 
 const Concept = ({ image, title, description }) => {
