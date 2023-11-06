@@ -2,6 +2,7 @@ import TabButton from "../TabButton.jsx";
 import { useState } from "react";
 import { EXAMPLES } from '../../CoreConceptsData.js'
 import Section from "../Section.jsx";
+import Tabs from '../Tabs.jsx';
 
 const Examples = () => {
     const [selectedTopic, setSelectedTopic] = useState();
@@ -24,13 +25,10 @@ const Examples = () => {
     }
 
     return (<Section title="Examples" id="examples">
-        <menu>
-            <TabButton isSelected={selectedTopic === 'components'} onClick={() => clickHandle('components')}>Components</TabButton>
+        <Tabs buttons={<><TabButton isSelected={selectedTopic === 'components'} onClick={() => clickHandle('components')}>Components</TabButton>
             <TabButton isSelected={selectedTopic === 'jsx'} onClick={() => clickHandle('jsx')}>JSX</TabButton>
             <TabButton isSelected={selectedTopic === 'props'} onClick={() => clickHandle('props')}>Props</TabButton>
-            <TabButton isSelected={selectedTopic === 'state'} onClick={() => clickHandle('state')}>State</TabButton>
-        </menu>
-        {tabContent}
+            <TabButton isSelected={selectedTopic === 'state'} onClick={() => clickHandle('state')}>State</TabButton></>}>{tabContent}</Tabs>
     </Section>)
 }
 
